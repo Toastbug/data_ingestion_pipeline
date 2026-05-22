@@ -1,0 +1,15 @@
+CREATE TABLE items (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    project_id TEXT NOT NULL,
+    external_id TEXT,
+    item_type TEXT NOT NULL CHECK (item_type IN ('product','content')),
+    is_active BOOLEAN NOT NULL DEFAULT true,
+    title TEXT NOT NULL,
+    description TEXT,
+    tags TEXT[] DEFAULT '{}',
+    category TEXT,
+    metadata JSONB DEFAULT '{}'::JSONB,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    UNIQUE(project_id, external_id)
+);
