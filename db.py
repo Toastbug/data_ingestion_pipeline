@@ -5,7 +5,7 @@ import psycopg2.extras
 DB_CONFIG = {
     "dbname": "ingestion_db",
     "user": "postgres",
-    "password": "my password",  #your password
+    "password": "mypassword",  #your password
     "host": "localhost",
     "port": "5432"
 }

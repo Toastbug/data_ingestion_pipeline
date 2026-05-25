@@ -69,5 +69,18 @@ if __name__ == "__main__":
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "context": {}
     })
+    # Event 4 — item DOES NOT EXIST yet (will land in pending_events)
+    send_event({
+        "project_id": "shop-y",
+        "user_id": "usr_002",
+        "item_id": "prod_999",
+        "item_type": "product2",
+        "event_type": "click",
+        "weight": 2.0,
+        "session_id": "sess_222",
+        "device": "desktop1",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "context": {}
+    })
 
     print("\n--- Done. Run worker.py to process them ---\n")

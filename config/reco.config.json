@@ -1,0 +1,20 @@
+{
+  "project_id": "shop-x",
+  "source": {
+    "dbname": "client_db",
+    "user": "postgres",
+    "password": "mypassword",
+    "host": "localhost",
+    "port": "5432",
+    "table": "products"
+  },
+  "mapping": {
+    "external_id": "id",
+    "title": "product_name",
+    "description": "product_description",
+    "category": "brand",
+    "item_type": "product",
+    "metadata": ["price", "sku", "tags"]
+  },
+  "sync_frequency": "hourly"
+}
