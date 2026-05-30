@@ -1,0 +1,9 @@
+# Aice Reco Pipeline — Cron Schedule
+# Project path: /home/toastybug/projects/work/pgmq
+# Python:       /home/toastybug/projects/work/pgmq/venv/bin/python
+
+# Catalog sync — every hour at minute 0
+0 * * * * cd /home/toastybug/projects/work/pgmq && /home/toastybug/projects/work/pgmq/venv/bin/python catalog_sync.py >> logs/catalog_sync.log 2>&1
+
+# Retry worker — every 15 minutes
+*/15 * * * * cd /home/toastybug/projects/work/pgmq && /home/toastybug/projects/work/pgmq/venv/bin/python retry_worker.py >> logs/retry_worker.log 2>&1

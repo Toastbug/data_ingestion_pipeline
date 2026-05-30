@@ -1,25 +1,51 @@
-# Virtual environment
+# ── Virtual environment ────────────────────────────────
 venv/
 
-# Environment variables
+# ── Environment variables ──────────────────────────────
 .env
 
-# Python cache
+# ── Python cache ───────────────────────────────────────
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.pyo
+.Python
 
-# PyCharm project files
+# ── PyCharm project files ──────────────────────────────
 .idea/
+*.iml
+*.iws
+*.ipr
 
-# OS files
+# ── OS files ───────────────────────────────────────────
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Logs
+# ── Logs ───────────────────────────────────────────────
+logs/
 *.log
 
-# Pytest cache
+# ── Pytest cache ───────────────────────────────────────
 .pytest_cache/
-.env.example
+.coverage
+htmlcov/
+
+# ── Distribution / packaging ───────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ── Database ───────────────────────────────────────────
+*.sqlite3
+*.db
+
+# ── Jupyter notebooks ──────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Node (for JavaScript SDK later) ───────────────────
+node_modules/
+npm-debug.log
+yarn-error.log
